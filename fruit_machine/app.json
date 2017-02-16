@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3498db",
+    "navigationBarTitleText": "水果机",
+    "navigationBarTextStyle":"white"
+  }
+}

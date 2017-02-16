@@ -1,0 +1,25 @@
+
+<!--index.wxml-->
+<view class="container-out">
+  <view class="container-in">
+    <view class="content-out" wx:for="{{awardList}}" style="top:{{item.topAward}}rpx;left:{{item.leftAward}}rpx;background-color: {{(index==indexSelect)?colorAwardSelect:colorAwardDefault}};">
+      <image class="award-image" id="{{index}}" bindtap="unitOperation" src="{{item.imageAward}}" date-obj="{{item}}"></image>
+      <view class="content-out-up">
+      {{item.unitIntegral}}  x <text class="unit-number">{{item.unitNumber}}</text>
+      </view>
+    </view>
+    <view class="fraction" bindtap="startGame">
+      <text>当前分数\r\n {{totalPoints}}</text>
+    </view>
+    <view class="magnification">
+      <text>当前倍率\r\n {{currentMagnification}}</text>
+    </view>
+  </view>
+</view>
+<view class="btn-content">
+  <view class="btn-add-minus">
+    <view class="btn-add" bindtap="addNumber">加分</view>
+    <view class="btn-add" bindtap="minusNumber">退分</view>
+  </view>
+  <view class="btn-start" bindtap="startGame" style=" background-color:{{isRunning?'#ccc':'#3498db'}}">开 始</view>
+</view>
